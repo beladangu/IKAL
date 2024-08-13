@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.carousel-item');
   
   const combinations = [
-    { word: 'BIENVENIDO', subtext: 'Estas en el lugar donde cada tratamiento es una conexión con la naturaleza y la sanación.', image: 'imagenes/BIENVENIDO.png' },
+    { word: 'IKAL', subtext: 'Bienvenid@ al centro de terapia y medicina tradicional, donde cada encuentro es una conexión con la naturaleza y la sanación.', image: 'imagenes/BIENVENIDO.png' },
     { word: 'ARMONÍA', subtext: '"Ofrecemos servicios integrales para la sanación del cuerpo, el espíritu y el alma por medio de terapia holística y la medicina tradicional."', image: 'imagenes/ARMONÍA.jpg' },
     { word: 'SALUD', subtext: '"Una experiencia que te permite conectar contigo mism@, la naturaleza y fluir en un abrazo con tus emociones."', image: 'imagenes/SALUD.jpg' },
     { word: 'SERVICIOS', subtext: '"Auriculoterapia, acupuntura, moxibustión, ventosas, tratamientos herbolarios, flores de bach y más."', image: 'imagenes/SERVICIOS.jpg' }
