@@ -2,12 +2,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 1em;
+  padding: 1em 2em; /* Añadir más espacio a los lados para el logo */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +26,6 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -60,6 +60,7 @@ nav ul li a {
   padding: 0.5em 1em;
   color: white;
   display: block;
+  text-align: center; /* Centra el texto en el menú */
 }
 
 nav ul li:hover .dropdown-menu {
@@ -73,6 +74,9 @@ nav ul li:hover .dropdown-menu {
 #inicio {
   position: relative;
   height: 100vh;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
 }
 
 .carousel {
@@ -108,13 +112,11 @@ nav ul li:hover .dropdown-menu {
 .carousel-text h1 {
   font-size: 4em;
   margin: 0;
-  text-decoration: none; /* Quitar subrayado */
 }
 
 .carousel-text p {
   font-size: 1.5em;
   margin-top: 0.5em;
-  text-decoration: none; /* Quitar subrayado */
 }
 
 button#play-music-btn {
@@ -135,6 +137,28 @@ button#play-music-btn:hover {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 1em;
+    flex-direction: column; /* Cambia la dirección del flex para pantallas pequeñas */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 0.5em 0;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+
+  .carousel {
+    height: 40vh; /* Ajuste para pantallas pequeñas */
+  }
+
   .carousel-text h1 {
     font-size: 3em; /* Ajuste para móviles */
   }
@@ -143,12 +167,23 @@ button#play-music-btn:hover {
     font-size: 1.2em; /* Ajuste para móviles */
   }
 
-  nav ul li a {
-    font-size: 0.9em;
-  }
-
   .dropdown-menu {
     position: static;
     box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown-menu li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-text h1 {
+    font-size: 2.5em; /* Ajuste para pantallas más pequeñas */
+  }
+
+  .carousel-text p {
+    font-size: 1em; /* Ajuste para pantallas más pequeñas */
   }
 }
