@@ -7,19 +7,25 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 1em 2em; /* Añadir más espacio a los lados para el logo */
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header .logo {
   height: 50px; /* Ajusta el tamaño del logo aquí */
 }
 
+nav {
+  flex-grow: 1;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -32,7 +38,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   display: block;
   padding: 0.5em 1em;
 }
@@ -72,7 +78,7 @@ nav ul li:hover .dropdown-menu {
 .carousel {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -100,13 +106,13 @@ nav ul li:hover .dropdown-menu {
 }
 
 .carousel-text h1 {
-  font-size: 6em; /* Doble tamaño */
+  font-size: 4em;
   margin: 0;
   text-decoration: none; /* Quitar subrayado */
 }
 
 .carousel-text p {
-  font-size: 2.4em; /* Doble tamaño */
+  font-size: 1.5em;
   margin-top: 0.5em;
   text-decoration: none; /* Quitar subrayado */
 }
@@ -130,15 +136,15 @@ button#play-music-btn:hover {
 
 @media (max-width: 768px) {
   .carousel-text h1 {
-    font-size: 4em; /* Ajuste para móviles */
+    font-size: 3em; /* Ajuste para móviles */
   }
 
   .carousel-text p {
-    font-size: 1.5em; /* Ajuste para móviles */
+    font-size: 1.2em; /* Ajuste para móviles */
   }
 
   nav ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .dropdown-menu {
