@@ -8,8 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     playMusicBtn.style.display = 'none'; // Oculta el botón después de hacer clic
   });
 
-  // Carrusel de imágenes y texto dinámico
+  // Carrusel de imágenes
   const carouselItems = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  function showNextItem() {
+    carouselItems[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    carouselItems[currentIndex].classList.add('active');
+  }
+
+  setInterval(showNextItem, 7000); // Cambia cada 7 segundos
+
+  // Actualización del texto dinámico
   const dynamicText = document.getElementById('dynamic-text');
   const dynamicSubtext = document.getElementById('dynamic-subtext');
 
@@ -20,23 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     { word: 'SERVICIOS', subtext: '"Auriculoterapia, acupuntura, moxibustión, ventosas, tratamientos herbolarios, flores de bach y más."', image: 'imagenes/SERVICIOS.jpg' }
   ];
 
-  let currentIndex = 0;
-
   function updateTextAndImage() {
     carouselItems.forEach((item, index) => {
       item.classList.remove('active'); // Eliminar clase activa de todas las imágenes
     });
 
+    currentIndex = (currentIndex + 1) % combinations.length;
     dynamicText.textContent = combinations[currentIndex].word;
     dynamicSubtext.textContent = combinations[currentIndex].subtext;
     carouselItems[currentIndex].style.backgroundImage = `url(${combinations[currentIndex].image})`;
 
     carouselItems[currentIndex].classList.add('active'); // Agregar clase activa a la imagen actual
-
-    currentIndex = (currentIndex + 1) % combinations.length;
   }
 
-  setInterval(updateTextAndImage, 7000); // Cambia cada 7 segundos
+  setInterval(updateTextAndImage, 7000); // Cambiar intervalo a 7000ms (7 segundos)
 
   // Ajustar la visibilidad del contenido en móvil
   const updateMenuOnResize = () => {
