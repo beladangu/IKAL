@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.navbar-nav').style.display = 'flex';
     }
   };
-
+// Inicializar el carrusel
+  items[currentIndex].classList.add('active');
   window.addEventListener('resize', updateMenuOnResize);
   updateMenuOnResize(); // Llamar al iniciar
 });
