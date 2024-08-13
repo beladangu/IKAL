@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="author" content="Bela Dangú">
+  <meta name="description" content="Portafolio de Bela Dangú - Consultorio de salud y bienestar con enfoque en acupuntura y medicina tradicional.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Acupuntura, Medicina Tradicional, Hierbas">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Titulo -->
+  <title>IKAL</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="imagenes/IKAL.jpg">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <!-- Estilos de FancyBox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+</head>
+<body>
+  <audio id="background-music" loop>
+    <source src="imagenes/Kopan - Atekokoli – Qamuxib'al Maya Music-Música Maya.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <button id="play-music-btn" class="btn btn-primary">Reproducir Música</button>
+
+  <header>
+    <img src="imagenes/IKAL NEG.jpeg" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acupuntura">Acupuntura</a></li>
+        <li><a href="#medicina-tradicional">Medicina Tradicional</a></li>
+        <li><a href="#hierbas">Hierbas</a></li>
+        <li class="dropdown">
+          <a href="#contacto" class="dropdown-toggle">Contacto</a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.youtube.com/@tvtlaloc-rs7ov" target="_blank">YouTube</a></li>
+            <li><a href="https://wa.link/lbp557" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61550623689240" target="_blank">Facebook</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="inicio">
+    <div class="carousel">
+      <div class="carousel-item" style="background-image: url('imagenes/BIENVENIDO.png');" aria-label="Imagen de inicio"></div>
+      <div class="carousel-item" style="background-image: url('imagenes/ARMONÍA.jpg');" aria-label="Imagen de acupuntura"></div>
+      <div class="carousel-item" style="background-image: url('imagenes/SALUD.jpg');" aria-label="Imagen de medicina tradicional"></div>
+      <div class="carousel-item" style="background-image: url('imagenes/SERVICIOS.jpg');" aria-label="Imagen de hierbas"></div>
+    </div>
+    <div class="carousel-text">
+      <h1 id="dynamic-text">BIENVENIDO</h1>
+      <p id="dynamic-subtext">Estas en el lugar donde cada tratamiento es una conexión con la naturaleza y la sanación.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="footer-content">
+            <p>2024 &copy; Todos los derechos reservados | Diseñado por Bela Dangú</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/beladangu/"><i class="bi bi-linkedin fs-3"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- Final de pie de página -->
+
+  <!-- Scripts JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="main.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

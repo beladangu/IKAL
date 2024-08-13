@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em 2em; /* Añadir más espacio a los lados para el logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  height: 50px; /* Ajusta el tamaño del logo aquí */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: block;
+  padding: 0.5em 1em;
+}
+
+/* Estilos del menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 0.25em;
+}
+
+.dropdown-menu li a {
+  padding: 0.5em 1em;
+  color: white;
+  display: block;
+}
+
+nav ul li:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+#inicio {
+  position: relative;
+  height: 100vh;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.carousel-text h1 {
+  font-size: 6em; /* Doble tamaño */
+  margin: 0;
+  text-decoration: none; /* Quitar subrayado */
+}
+
+.carousel-text p {
+  font-size: 2.4em; /* Doble tamaño */
+  margin-top: 0.5em;
+  text-decoration: none; /* Quitar subrayado */
+}
+
+button#play-music-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button#play-music-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .carousel-text h1 {
+    font-size: 4em; /* Ajuste para móviles */
+  }
+
+  .carousel-text p {
+    font-size: 1.5em; /* Ajuste para móviles */
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+}
