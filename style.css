@@ -2,25 +2,19 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 1em 2em;
+  padding: 1em 2em; /* Añadir más espacio a los lados para el logo */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 header .logo {
-  height: 50px;
-}
-
-nav {
-  flex-grow: 1;
+  height: 50px; /* Ajusta el tamaño del logo aquí */
 }
 
 nav ul {
@@ -38,7 +32,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   display: block;
   padding: 0.5em 1em;
 }
@@ -60,7 +54,6 @@ nav ul li a {
   padding: 0.5em 1em;
   color: white;
   display: block;
-  text-align: center;
 }
 
 nav ul li:hover .dropdown-menu {
@@ -89,8 +82,9 @@ nav ul li:hover .dropdown-menu {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -109,13 +103,15 @@ nav ul li:hover .dropdown-menu {
 }
 
 .carousel-text h1 {
-  font-size: 4em;
+  font-size: 6em; /* Doble tamaño */
   margin: 0;
+  text-decoration: none; /* Quitar subrayado */
 }
 
 .carousel-text p {
-  font-size: 1.5em;
+  font-size: 2.4em; /* Doble tamaño */
   margin-top: 0.5em;
+  text-decoration: none; /* Quitar subrayado */
 }
 
 button#play-music-btn {
@@ -136,26 +132,8 @@ button#play-music-btn:hover {
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 1em;
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li {
-    margin: 0.5em 0;
-  }
-
-  nav ul li a {
-    font-size: 0.9em;
-  }
-
-  .carousel {
-    height: 50vh; /* Ajuste para pantallas pequeñas */
+  #inicio {
+    height: 50vh; /* Ajuste para pantallas más pequeñas */
   }
 
   .carousel-text h1 {
@@ -165,24 +143,44 @@ button#play-music-btn:hover {
   .carousel-text p {
     font-size: 1.2em;
   }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    width: 100%;
-  }
-
-  .dropdown-menu li {
-    text-align: center;
-  }
 }
 
 @media (max-width: 480px) {
   .carousel-text h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .carousel-text p {
     font-size: 1em;
   }
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+.footer-content ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.footer-content ul li a:hover {
+  text-decoration: underline;
 }
