@@ -8,7 +8,7 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 1em 2em; /* Añadir más espacio a los lados para el logo */
+  padding: 1em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@ header {
 }
 
 header .logo {
-  height: 50px; /* Ajusta el tamaño del logo aquí */
+  height: 50px;
 }
 
 nav {
@@ -60,7 +60,7 @@ nav ul li a {
   padding: 0.5em 1em;
   color: white;
   display: block;
-  text-align: center; /* Centra el texto en el menú */
+  text-align: center;
 }
 
 nav ul li:hover .dropdown-menu {
@@ -73,16 +73,15 @@ nav ul li:hover .dropdown-menu {
 
 #inicio {
   position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden; /* Evita el desplazamiento en el carrusel */
 }
 
 .carousel {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -139,7 +138,7 @@ button#play-music-btn:hover {
 @media (max-width: 768px) {
   header {
     padding: 1em;
-    flex-direction: column; /* Cambia la dirección del flex para pantallas pequeñas */
+    flex-direction: column;
   }
 
   nav ul {
@@ -156,15 +155,15 @@ button#play-music-btn:hover {
   }
 
   .carousel {
-    height: 40vh; /* Ajuste para pantallas pequeñas */
+    height: 50vh; /* Ajuste para pantallas pequeñas */
   }
 
   .carousel-text h1 {
-    font-size: 3em; /* Ajuste para móviles */
+    font-size: 3em;
   }
 
   .carousel-text p {
-    font-size: 1.2em; /* Ajuste para móviles */
+    font-size: 1.2em;
   }
 
   .dropdown-menu {
@@ -180,10 +179,10 @@ button#play-music-btn:hover {
 
 @media (max-width: 480px) {
   .carousel-text h1 {
-    font-size: 2.5em; /* Ajuste para pantallas más pequeñas */
+    font-size: 2.5em;
   }
 
   .carousel-text p {
-    font-size: 1em; /* Ajuste para pantallas más pequeñas */
+    font-size: 1em;
   }
 }
